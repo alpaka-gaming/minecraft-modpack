@@ -1,0 +1,22 @@
+name: Release
+on:
+  push:
+    tags:
+    - 'v*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Archive Release
+      uses: thedoctor0/zip-release@master
+      with:
+        type: 'zip'
+        directory: 'src'
+        filename: 'Alpaka-Modpack.mrpack'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Upload Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "src/*.mrpack"
+        token: ${{ secrets.GITHUB_TOKEN }}
