@@ -13,7 +13,7 @@ jobs:
       with:
         type: 'zip'
         directory: 'src'
-        filename: 'Alpaka-Modpack.mrpack'
+        filename: 'Alpakas-Modpack.mrpack'
         exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: Upload Release
       uses: ncipollo/release-action@v1
