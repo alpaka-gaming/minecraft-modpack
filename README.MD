@@ -1,10 +1,8 @@
-![logo](src/overrides/icon.png)
+![logo](https://raw.githubusercontent.com/alpaka-gaming/minecraft-modpack/develop/src/overrides/icon.png)
 
 # Alpaka's Modpack
 
----------------------------------------
-
-## Requiriments
+## Requirements
 - Minecraft 1.20.1
 - Fabric 0.15.3
 
@@ -16,8 +14,6 @@
 - [Alpaka Respack](https://github.com/alpaka-gaming/minecraft-respack)
 - [Alpaka Langpack](https://github.com/alpaka-gaming/minecraft-langpack)
 
-## Mods
-- TBD
 
 ## Thanks
 - [More Villagers By SameDifferent](https://www.curseforge.com/minecraft/mc-mods/more-villagers-fabric/files)
@@ -26,6 +22,6 @@
 
 See the [changelog](CHANGELOG.md) for changes.
 
-## Licence
+## License
 
 Code released under [License](LICENSE)
