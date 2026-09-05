@@ -1,0 +1,33 @@
+workflow: GitFlow/v1
+tag-prefix: '[vV]?'
+branches:
+  develop:
+    mode: ContinuousDelivery
+    label: alpha
+    increment: Minor
+    prevent-increment:
+      when-current-commit-tagged: false
+    track-merge-target: true
+  main:
+    regex: "^master$|^main$"
+    mode: ContinuousDelivery
+    label: ''
+    increment: Patch
+    prevent-increment:
+      of-merged-branch: true
+  release:
+    mode: ManualDeployment
+    label: beta
+    increment: Minor
+  feature:
+    mode: ManualDeployment
+    label: '{BranchName}'
+    increment: Inherit
+  pull-request:
+    mode: ContinuousDelivery
+    label: 'PR{Number}'
+    increment: Inherit
+  hotfix:
+    mode: ManualDeployment
+    label: beta
+    increment: Inherit
